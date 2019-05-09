@@ -18,13 +18,49 @@ section{
     position:relative;
 }
 
+.one_icon{
+    background-color: rgba(0,0,0, 0.3);
+    color: rgba(0,0,0, 0.3);
+    width:100px;
+    height: 100px;
+    margin:0 auto;
+    border-radius: 50%;
+    display: grid;
+    place-items:center;
+    font-size: 2em;
+}
+
+.one::after,
+.one::before{
+    position: absolute;
+    content: '';
+    width: 150px;
+    height:150px;
+    bottom: -1em;
+    background-color: #FFC145;
+}
+.one::before{
+    right: 50%;
+    transform: skew(0, 20deg);
+    z-index:100;
+}
+
+.one::after{
+    left:50%;
+    transform: skew(0, -20deg);
+    z-index: 100;
+}
 .two{
     background: #FF6B6C;
     position:relative;
     margin-bottom: -10vw;
     z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
 }
-
+.two_img{
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
 .three{
     background: #5B5F97;
 }
